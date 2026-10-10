@@ -1,0 +1,6 @@
+{
+  "name": "یادآور حرفه‌ای آفلاین | Reminder Pro",
+  "description": "سامانه هوشمند و آفلاین یادآوری با تقویم شمسی، پشتیبانی از اندروید و آی‌او‌اس، چندزبانه و ذخیره‌سازی محلی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

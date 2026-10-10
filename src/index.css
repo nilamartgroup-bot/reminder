@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* BNAZANIN local & system font definitions */
+@font-face {
+  font-family: 'BNAZANIN';
+  src: local('BNAZANIN'), local('B Nazanin'), local('BNazanin'), local('B_Nazanin'), local('Nazanin');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BNAZANIN';
+  src: local('BNAZANIN Bold'), local('B Nazanin Bold'), local('BNazaninBold'), local('B_Nazanin_Bold');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'B Nazanin';
+  src: local('BNAZANIN'), local('B Nazanin'), local('BNazanin'), local('B_Nazanin'), local('Nazanin');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --font-fa: 'BNAZANIN', 'B Nazanin', 'BNazanin', 'Vazirmatn', Tahoma, system-ui, sans-serif;
+    --font-ar: 'Cairo', 'Vazirmatn', Tahoma, system-ui, sans-serif;
+    --font-en: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html[lang="fa"] {
+    font-family: var(--font-fa);
+  }
+
+  html[lang="fa"] body,
+  html[lang="fa"] button,
+  html[lang="fa"] input,
+  html[lang="fa"] select,
+  html[lang="fa"] textarea {
+    font-family: var(--font-fa);
+  }
+
+  html[lang="ar"] {
+    font-family: var(--font-ar);
+  }
+
+  html[dir="ltr"] {
+    font-family: var(--font-en);
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  input, textarea {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+/* Custom scrollbar for sleek dark look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
