@@ -38,6 +38,9 @@ jobs:
         npx cap add android || true
         npx cap sync android
 
+    - name: Grant execute permission for Gradle wrapper
+      run: chmod +x android/gradlew
+
     - name: Build Android APK
       working-directory: ./android
       run: ./gradlew assembleDebug
