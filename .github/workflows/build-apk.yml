@@ -32,8 +32,11 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Initialize Capacitor Android
-      run: npx cap update android
+    - name: Prepare Capacitor Android
+      run: |
+        mkdir -p android/app/src/main/assets
+        npx cap add android || true
+        npx cap sync android
 
     - name: Build Android APK
       working-directory: ./android
